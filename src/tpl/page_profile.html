@@ -1,0 +1,68 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-controller="SigninFormController">
+  <div class="col">
+    <div style="background:url(img/c4.jpg) center center; background-size:cover">
+      <div class="wrapper-lg bg-white-opacity">
+        <div class="row m-t">
+          <div class="col-sm-7">
+            <a href class="thumb-lg pull-left m-r">
+              <img src="img/User_Circle.png" class="img-circle">
+            </a>
+            <div class="clear m-b">
+              <div class="m-b m-t-sm">
+                <span class="h2 text-black">Administrador </span>
+                <p></p>
+                  <span class="h3 text-black">{{app.nombre}}</span>
+               <!--  <small class="m-l">{{app.nombre}}</small> -->
+              </div>
+ <a class="btn btn-xs btn-info" ng-hide="item.editing" ng-click="editItem(item)">Editar datos de cuenta</a>
+          <a class="btn btn-xs btn-success" ng-show="item.editing" ng-click="doneEditingDatos(item)">Guardar cambios</a>
+
+
+              <div class="wrapper-lg ">
+       <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+        <div class="m-t-n-xxs m-b-n-xxs m-l-xs">
+        
+      
+        </div>
+      </div>
+
+              
+
+              <div ng-show="item.editing" class="h1">
+                    <input type="text" placeholder="{{app.nombre}}" class="form-control w-auto input-lg m-b-n-xxs font-bold" ng-model="item.nombre" >
+                    <input type="text" placeholder="{{app.email}}" class="form-control w-auto input-lg font-bold" ng-model="item.email" > 
+                     <input type="text" placeholder="Contraseña" class="form-control w-auto input-lg font-bold" ng-model="item.password" > 
+              </div>
+             <!--  <p class="m-b">
+                <a href class="btn btn-sm btn-bg btn-rounded btn-default btn-icon"><i class="fa fa-twitter"></i></a>
+                <a href class="btn btn-sm btn-bg btn-rounded btn-default btn-icon"><i class="fa fa-facebook"></i></a>
+                <a href class="btn btn-sm btn-bg btn-rounded btn-default btn-icon"><i class="fa fa-google-plus"></i></a>
+              </p>
+              <a href class="btn btn-sm btn-success btn-rounded">Follow</a> -->
+            </div>
+          </div>
+          <div class="col-sm-5">
+          <!--   <div class="pull-right pull-none-xs text-center">
+              <a href class="m-b-md inline m">
+                <span class="h3 block font-bold">2k</span>
+                <small>Followers</small>
+              </a>
+              <a href class="m-b-md inline m">
+                <span class="h3 block font-bold">250</span>
+                <small>Following</small>
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--   <div class="wrapper bg-white b-b">
+      <ul class="nav nav-pills nav-sm">
+        <li class="active"><a href>Stream</a></li>
+        <li><a href>Profile</a></li>
+        <li><a href>Messages</a></li>
+      </ul>
+    </div> -->
+    
+  </div>
+</div>
