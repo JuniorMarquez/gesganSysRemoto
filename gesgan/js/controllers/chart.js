@@ -459,7 +459,7 @@ if (typeof MyService.data.idUsuario==="undefined"){
  var totalNoPrenadas=0;
  var totalHembrasJovenes=0;
  var totalVacas=0;
-    $http.get('http://52.33.127.122:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
     $scope.animales = resp.data.results;
 var numero = $scope.animales.length;
  $scope.total= numero;
@@ -487,7 +487,7 @@ var numero = $scope.animales.length;
     
 
 
-    $http.get('http://52.33.127.122:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     $scope.grupos = resp2.data.results;
 var numero2 = $scope.grupos.length;
  $scope.totalGrupos= numero2;
@@ -495,7 +495,7 @@ var numero2 = $scope.grupos.length;
     
 
 $scope.getGraficoPrincipal =function(){
-      $http.get('http://52.33.127.122:1337/ordeno/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://54.202.62.62:1337/ordeno/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.ordenosGrafico2 = resp.data.results;
         var cant = $scope.ordenosGrafico2.length;
         $scope.cantidadOrdenos=$scope.ordenosGrafico2.length;

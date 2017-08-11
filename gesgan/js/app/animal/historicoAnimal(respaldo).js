@@ -13,7 +13,7 @@ app.controller('historicoAnimalCtrl', ['$scope', '$http', '$filter', '$modal', '
 $scope.getOrdenos = function () {
 
   $scope.ordenos=null;
-  $http.get('http://52.33.127.122:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+  $http.get('http://54.202.62.62:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
     $scope.ordenos = resp.data.results;
     
     // MyService.data.ordenos=resp.data.results;

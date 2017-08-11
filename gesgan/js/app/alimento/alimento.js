@@ -43,7 +43,7 @@ app.controller('AlimentoCtrl', ['$scope', '$state','$http', '$filter', '$modal',
   // $scope.format = 'shortDate';
 
   // $scope.carga = function (){
-  //   $http.get('http://52.33.127.122:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  //   $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
   //     $scope.groups = resp.data.results;
   //   });
   // };
@@ -56,7 +56,7 @@ app.controller('AlimentoCtrl', ['$scope', '$state','$http', '$filter', '$modal',
 //     $scope.group = item;
 //     // $scope.group.selected = true;
 //     $scope.filter = item.name;
-//     $http.get('http://52.33.127.122:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+//     $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
 //       $scope.items = resp.data.results;
 //       // $scope.item = null;  
 //       // $scope.item.selected = true;
@@ -65,7 +65,7 @@ app.controller('AlimentoCtrl', ['$scope', '$state','$http', '$filter', '$modal',
 //   };
 $scope.selectItem2 = function(item){  
 
-     $http.get('http://52.33.127.122:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+     $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.items = resp.data.results;
       // $scope.item = null;  
       // $scope.item.selected = true;
@@ -104,7 +104,7 @@ $scope.selectItem2 = function(item){
     }
 
     $scope.item.selected = true;
-    $http.get('http://52.33.127.122:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.animales = resp.data.results;
     });
       
@@ -135,7 +135,7 @@ $scope.selectItem2 = function(item){
   // };
  
   
-  $http.get('http://52.33.127.122:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
     $scope.groups = resp.data.results;
   });
 
@@ -188,15 +188,15 @@ $scope.selectItem2 = function(item){
     }
   };
   $scope.carga = function(){
-    $http.get('http://52.33.127.122:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.groups = resp.data.results;
     });
   };
-  $http.get('http://52.33.127.122:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  $http.get('http://54.202.62.62:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.razas = resp.data.results;
     });
  $scope.cargaAlimentos = function(){
-      $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://54.202.62.62:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.alimentos = resp.data.results;
       });
     };
@@ -455,12 +455,12 @@ $scope.selectItem2 = function(item){
   // };
 
   // $scope.deleteGroup = function(item){
-  //   $http.delete('http://52.33.127.122:1337/grupo/'+item.id , item)
+  //   $http.delete('http://54.202.62.62:1337/grupo/'+item.id , item)
   //   $scope.groups.splice($scope.groups.indexOf(item), 1);
   // };
 
 
-$http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+$http.get('http://54.202.62.62:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.items = resp.data.results;
       $scope.item = null;  
       // $scope.item.selected = true;
@@ -474,7 +474,7 @@ $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsua
   //   $scope.group = item;
   //   $scope.group.selected = true;
   //   $scope.filter = item.name;
-  //   $http.get('http://52.33.127.122:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  //   $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
   //     $scope.items = resp.data.results;
   //     $scope.item = null;  
   //     // $scope.item.selected = true;
@@ -513,7 +513,7 @@ $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsua
     // }
 
     $scope.item.selected = true;
-    $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://54.202.62.62:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.alimento = resp.data.results;
     });
       
@@ -524,14 +524,14 @@ $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsua
   };
 
   $scope.deleteItem = function(item){
-    $http.delete('http://52.33.127.122:1337/animal/'+item.id , item)
+    $http.delete('http://54.202.62.62:1337/animal/'+item.id , item)
     $scope.items.splice($scope.items.indexOf(item), 1);
     $scope.item = $filter('orderBy')($scope.items, 'nombre')[0];
     if($scope.item) $scope.item.selected = true;
   };
 
   $scope.deleteAlimento = function(animal){
-    $http.delete('http://52.33.127.122:1337/alimento/'+alimento.id , alimento)
+    $http.delete('http://54.202.62.62:1337/alimento/'+alimento.id , alimento)
     $scope.alimentosFiltradas.splice($scope.alimentos.indexOf(alimento), 1);
     $scope.alimento = $filter('orderBy')($scope.alimentoes, 'nombre')[0];
     if($scope.alimento) $scope.alimento.selected = true;
@@ -567,7 +567,7 @@ $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsua
   //   $scope.item.prenez = false;
   //   $scope.item.control=true;
   //   $scope.item.idUsuario = MyService.data.idUsuario;
-  //   $http.get('http://52.33.127.122:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  //   $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
   //   $scope.groups = resp.data.results;
   //   }); 
   // };
@@ -592,11 +592,11 @@ $http.get('http://52.33.127.122:1337/alimento/?idUsuario='+MyService.data.idUsua
   
     if (MyService.data.idenAlimento){
       $scope.pop4();
-      $http.put('http://52.33.127.122:1337/alimento/'+MyService.data.idenAlimento , alimentoAct)
+      $http.put('http://54.202.62.62:1337/alimento/'+MyService.data.idenAlimento , alimentoAct)
     }
     else {
       $scope.pop3();;
-      $http.post('http://52.33.127.122:1337/alimento/', alimentoAct)
+      $http.post('http://54.202.62.62:1337/alimento/', alimentoAct)
     }
     $scope.items = null;
     $scope.alimentos = null;

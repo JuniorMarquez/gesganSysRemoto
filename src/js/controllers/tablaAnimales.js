@@ -3,7 +3,7 @@ app.controller('TablaAnimalesCtrl', ['$scope', '$http', function($scope, $http) 
 $scope.filter = '';
 var saludo="";
 $scope.saludo="hola";
-  $http.get('http://52.33.127.122:1337/animal').then(function (resp) {
+  $http.get('http://54.202.62.62:1337/animal').then(function (resp) {
     $scope.listado = resp.data.results;
     alert("holaaa");
     MyService.data.listado=resp.data.results;
