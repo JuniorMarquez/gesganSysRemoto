@@ -75,7 +75,7 @@ app.controller('AnimalCtrl', ['$scope', '$state','$http', '$filter', '$modal', '
   $scope.format = 'shortDate';
 
   $scope.carga = function (){
-    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.groups = resp.data.results;
     });
   };
@@ -88,7 +88,7 @@ MyService.data.luz=null;
     $scope.group = item;
     // $scope.group.selected = true;
     $scope.filter = item.name;
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.items = resp.data.results;
       // $scope.item = null;  
       // $scope.item.selected = true;
@@ -97,7 +97,7 @@ MyService.data.luz=null;
   };
 $scope.selectItem2 = function(item){  
 
-     $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+     $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.items = resp.data.results;
       // $scope.item = null;  
       // $scope.item.selected = true;
@@ -136,7 +136,7 @@ $scope.selectItem2 = function(item){
     }
 
     $scope.item.selected = true;
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.animales = resp.data.results;
     });
       
@@ -167,7 +167,7 @@ $scope.selectItem2 = function(item){
   // };
  
   
-  $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
     $scope.groups = resp.data.results;
   });
 
@@ -220,15 +220,15 @@ $scope.selectItem2 = function(item){
     }
   };
   $scope.carga = function(){
-    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.groups = resp.data.results;
     });
   };
-  $http.get('http://54.202.62.62:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  $http.get('http://52.39.15.75:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.razas = resp.data.results;
     });
  $scope.cargaAlimentos = function(){
-      $http.get('http://54.202.62.62:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.alimentos = resp.data.results;
       });
     };
@@ -291,7 +291,7 @@ $scope.openBorrarGrupo = function (item) {
   $scope.openConfirm2 = function (item) {
   var guachiman ="si";
     // alert("dat "+item.name);
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.animales = resp.data.results;
       // alert("tamaño "+$scope.animales.length);
       for (var i= 0; i < $scope.animales.length; i++){
@@ -555,7 +555,7 @@ $scope.openPeso = function (item) {
   };
 
   $scope.deleteGroup = function(item){
-    $http.delete('http://54.202.62.62:1337/grupo/'+item.id , item)
+    $http.delete('http://52.39.15.75:1337/grupo/'+item.id , item)
     $scope.groups.splice($scope.groups.indexOf(item), 1);
   };
 
@@ -567,7 +567,7 @@ $scope.openPeso = function (item) {
     $scope.group = item;
     $scope.group.selected = true;
     $scope.filter = item.name;
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.items = resp.data.results;
       $scope.item = null;  
       // $scope.item.selected = true;
@@ -603,10 +603,10 @@ $scope.openPeso = function (item) {
     }
 
     $scope.item.selected = true;
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.animales = resp.data.results;
     });
-     $http.get('http://54.202.62.62:1337/peso/?idAnimal='+identificador).then(function (resp) {
+     $http.get('http://52.39.15.75:1337/peso/?idAnimal='+identificador).then(function (resp) {
       $scope.pesos = resp.data.results;
     $scope.item.peso=($scope.pesos[$scope.pesos.length-1]).peso;
 
@@ -619,14 +619,14 @@ $scope.openPeso = function (item) {
   };
 
   $scope.deleteItem = function(item){
-    $http.delete('http://54.202.62.62:1337/animal/'+item.id , item)
+    $http.delete('http://52.39.15.75:1337/animal/'+item.id , item)
     $scope.items.splice($scope.items.indexOf(item), 1);
     $scope.item = $filter('orderBy')($scope.items, 'nombre')[0];
     if($scope.item) $scope.item.selected = true;
   };
 
   $scope.deleteAnimal = function(animal){
-    $http.delete('http://54.202.62.62:1337/animal/'+animal.id , animal)
+    $http.delete('http://52.39.15.75:1337/animal/'+animal.id , animal)
     $scope.items.splice($scope.items.indexOf(item), 1);
     $scope.animalesFiltradas.splice($scope.animales.indexOf(animal), 1);
     $scope.animal = $filter('orderBy')($scope.animales, 'nombre')[0];
@@ -654,7 +654,7 @@ $scope.openPeso = function (item) {
     $scope.item.control=true;
     $scope.item.mensajeNuevo=null;
     $scope.item.idUsuario = MyService.data.idUsuario;
-    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
     $scope.groups = resp.data.results;
     }); 
   };
@@ -672,7 +672,7 @@ $scope.openPeso = function (item) {
   //   $scope.item.prenez = false;
   //   $scope.item.control=true;
   //   $scope.item.idUsuario = MyService.data.idUsuario;
-  //   $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+  //   $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
   //   $scope.groups = resp.data.results;
   //   }); 
   // };
@@ -693,12 +693,12 @@ $scope.openPeso = function (item) {
     grupoAct.selected=item.selected;
     grupoAct.editing=item.editing;
     if (MyService.data.idenGen){
-      $http.put('http://54.202.62.62:1337/grupo/'+MyService.data.idenGen, grupoAct)
+      $http.put('http://52.39.15.75:1337/grupo/'+MyService.data.idenGen, grupoAct)
     }
     else {
-      $http.post('http://54.202.62.62:1337/grupo/', grupoAct)
+      $http.post('http://52.39.15.75:1337/grupo/', grupoAct)
     }
-    // $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    // $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
     //   $scope.groups = resp.data.results;
     // });
     $scope.items = null;
@@ -718,7 +718,7 @@ $scope.openPeso = function (item) {
 
   $scope.registrarPesoInicial = function(peso){
 // setTimeout(function(peso) {
-// $http.get('http://54.202.62.62:1337/animal/').then(function (resp) {
+// $http.get('http://52.39.15.75:1337/animal/').then(function (resp) {
 //       $scope.ordenados = resp.data.results;
 //     MyService.data.ultimoId=($scope.ordenados[$scope.ordenados.length-1]).id;
 
@@ -728,7 +728,7 @@ $scope.openPeso = function (item) {
 //     pesoInicial.peso=peso;
 //     pesoInicial.idAnimal=MyService.data.ultimoId;
 //     pesoInicial.idUsuario=MyService.data.idUsuario;
-//     $http.post('http://54.202.62.62:1337/peso/' ,pesoInicial);
+//     $http.post('http://52.39.15.75:1337/peso/' ,pesoInicial);
 
 // }, 1000);
  
@@ -766,16 +766,16 @@ animalAct.existente=true;
     animalAct.sexo=item.sexo;
     if (MyService.data.idenAnimal){
       $scope.pop4();
-      $http.put('http://54.202.62.62:1337/animal/'+MyService.data.idenAnimal , animalAct)
+      $http.put('http://52.39.15.75:1337/animal/'+MyService.data.idenAnimal , animalAct)
     }
     else {
       $scope.pop3();;
-      $http.post('http://54.202.62.62:1337/animal/', animalAct)
+      $http.post('http://52.39.15.75:1337/animal/', animalAct)
     }
-    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.groups = resp.data.results;
     });
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.app.states = resp.data.results;
     });
     // $scope.items = null;
@@ -801,15 +801,15 @@ animalAct.existente=true;
     animalAct.prenez=item.prenez;
     animalAct.sexo=item.sexo;
     if (MyService.data.idenAnimal){
-      $http.put('http://54.202.62.62:1337/animal/'+MyService.data.idenAnimal , animalAct)
+      $http.put('http://52.39.15.75:1337/animal/'+MyService.data.idenAnimal , animalAct)
     }
     else {
-      $http.post('http://54.202.62.62:1337/animal/', animalAct)
+      $http.post('http://52.39.15.75:1337/animal/', animalAct)
     }
-    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.groups = resp.data.results;
     });
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.app.states = resp.data.results;
     });
     $scope.animales = null;
@@ -831,15 +831,15 @@ animalAct.existente=true;
     animalAct.prenez=item.prenez;
     animalAct.sexo=item.sexo;
     if (MyService.data.idenAnimal){
-      $http.put('http://54.202.62.62:1337/animal/'+MyService.data.idenAnimal , animalAct)
+      $http.put('http://52.39.15.75:1337/animal/'+MyService.data.idenAnimal , animalAct)
     }
     else {
-      $http.post('http://54.202.62.62:1337/animal/', animalAct)
+      $http.post('http://52.39.15.75:1337/animal/', animalAct)
     }
-    $http.get('http://54.202.62.62:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/grupo/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.groups = resp.data.results;
     });
-    $http.get('http://54.202.62.62:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.app.states = resp.data.results;
     });
     $scope.animales = null;

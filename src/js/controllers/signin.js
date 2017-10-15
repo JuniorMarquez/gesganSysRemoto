@@ -40,7 +40,7 @@ app.controller('SigninFormController', ['$scope', '$http', '$state', 'MyService'
      $scope.app.nombre=item.nombre;
 
       // $scope.pop4();
-      $http.put('http://54.202.62.62:1337/usergesgan/'+MyService.data.idUsuario , usuarioAct)
+      $http.put('http://52.39.15.75:1337/usergesgan/'+MyService.data.idUsuario , usuarioAct)
     
 MyService.data.datos=item;
     // $scope.items = null;
@@ -53,7 +53,7 @@ MyService.data.datos=item;
     $scope.login = function() {
       $scope.authError = null;
       // Try to login
-       $http.get('http://54.202.62.62:1337/usergesgan/?email=' +$scope.user.email).success(function(respuesta){
+       $http.get('http://52.39.15.75:1337/usergesgan/?email=' +$scope.user.email).success(function(respuesta){
                 // if ($scope.email=== 'undefined'){$scope.mensaje="usuario no registrado"}
                      // if (vm.dato !== vm.login.usuario){vm.login.mensaje="usuario no registrado"}
                 $scope.datos = respuesta.results[0];

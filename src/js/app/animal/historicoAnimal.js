@@ -9,7 +9,7 @@ $scope.date = moment();
 app.controller('historicoAnimalCtrl', ['$scope', '$http', '$filter', '$modal', 'MyService', 'filterFilter', 'datepickerConfig',function($scope, $http, $filter,$modal, MyService,filterFilter, datepickerConfig) {
     $scope.getGrafico =function(){
       $scope.nombre=MyService.data.animalConsultado.nombre;
-      $http.get('http://54.202.62.62:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.ordenosGrafico = resp.data.results;
         var cant = $scope.ordenosGrafico.length;
         $scope.ordenosGrafico.nombre=MyService.data.animalConsultado.nombre;
@@ -127,7 +127,7 @@ app.controller('historicoAnimalCtrl', ['$scope', '$http', '$filter', '$modal', '
     };
     $scope.getOrdenos = function () {
       $scope.ordenos=null;
-      $http.get('http://54.202.62.62:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.ordenos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -171,7 +171,7 @@ app.controller('historicoAnimalCtrl', ['$scope', '$http', '$filter', '$modal', '
  $scope.getOrdenos();
 $scope.getPesos = function () {
       $scope.pesos=null;
-      $http.get('http://54.202.62.62:1337/peso/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/peso/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.pesos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -216,7 +216,7 @@ $scope.getPesos = function () {
    
     $scope.getTratamientos = function () {
       $scope.tratamientos=null;
-      $http.get('http://54.202.62.62:1337/tratamiento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/tratamiento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.tratamientos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -264,7 +264,7 @@ $scope.getPesos = function () {
  
     $scope.getBanos = function () {
       $scope.banos=null;
-      $http.get('http://54.202.62.62:1337/sumbano/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/sumbano/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.banos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -310,7 +310,7 @@ $scope.getPesos = function () {
 
     $scope.getMedicamentos = function () {
       $scope.medicamentos=null;
-      $http.get('http://54.202.62.62:1337/summedicamento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/summedicamento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.medicamentos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -354,7 +354,7 @@ $scope.getPesos = function () {
     $scope.getMedicamentos();
      $scope.getAlimentos = function () {
       $scope.alimentos=null;
-      $http.get('http://54.202.62.62:1337/sumalimento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/sumalimento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.alimentos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -400,7 +400,7 @@ $scope.getPesos = function () {
 
     $scope.getSaltos = function () {
       $scope.saltos=null;
-      $http.get('http://54.202.62.62:1337/salto/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/salto/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.saltos = resp.data.results;
         var bandera="";
         var bandera2="";
@@ -445,7 +445,7 @@ $scope.getPesos = function () {
 
     $scope.getPromedio =function(){
       $scope.ordenosPromedio=null;
-      $http.get('http://54.202.62.62:1337/ordeno').then(function (resp) {
+      $http.get('http://52.39.15.75:1337/ordeno').then(function (resp) {
         $scope.ordenosPromedio = resp.data.results;
         $scope.sumaTotal=0;
         $scope.promedioTotal=0;
@@ -461,7 +461,7 @@ $scope.getPesos = function () {
 
     $scope.getBanos2 = function () {
     $scope.banosSegundo=null;
-    $http.get('http://54.202.62.62:1337/sumbano/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/sumbano/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
       $scope.banosSegundo = resp.data.results;  
       var bandera="";
       var bandera2="";
@@ -495,7 +495,7 @@ $scope.getPesos = function () {
 
     $scope.getSaltos2 = function () {
       $scope.saltosSegundo=null;
-      $http.get('http://54.202.62.62:1337/salto/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/salto/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.saltosSegundo = resp.data.results;  
         var bandera="";
         var bandera2="";
@@ -530,7 +530,7 @@ $scope.getPesos = function () {
 
     $scope.getMedicamentos2 = function () {
       $scope.medicamentosSegundo=null;
-      $http.get('http://54.202.62.62:1337/summedicamento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/summedicamento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.medicamentosSegundo = resp.data.results;  
         var bandera="";
         var bandera2="";
@@ -564,7 +564,7 @@ $scope.getPesos = function () {
 
     $scope.getAlimentos2 = function () {
       $scope.alimentosSegundo=null;
-      $http.get('http://54.202.62.62:1337/sumalimento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/sumalimento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.alimentosSegundo = resp.data.results;  
         var bandera="";
         var bandera2="";
@@ -598,7 +598,7 @@ $scope.getPesos = function () {
 
     $scope.getTratamientos2 = function () {
       $scope.tratamientosSegundo=null;
-      $http.get('http://54.202.62.62:1337/tratamiento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+      $http.get('http://52.39.15.75:1337/tratamiento/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
         $scope.tratamientosSegundo = resp.data.results;  
         var bandera="";
         var bandera2="";
@@ -631,7 +631,7 @@ $scope.getPesos = function () {
     };
       $scope.getPesos2 = function () {
     $scope.pesosSegundo=null;
-    $http.get('http://54.202.62.62:1337/peso/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/peso/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
       $scope.pesosSegundo = resp.data.results;  
       var bandera="";
       var bandera2="";
@@ -667,7 +667,7 @@ $scope.getPesos = function () {
 
     $scope.getOrdenos2 = function () {
     $scope.ordenosSegundo=null;
-    $http.get('http://54.202.62.62:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
+    $http.get('http://52.39.15.75:1337/ordeno/?idAnimal='+MyService.data.animalConsultado.id).then(function (resp) {
       $scope.ordenosSegundo = resp.data.results;  
       var bandera="";
       var bandera2="";
