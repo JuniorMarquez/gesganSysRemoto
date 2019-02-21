@@ -113,7 +113,7 @@ $scope.filter = '';
       data: []                                             
     };
 
-$http.get('http://52.39.15.75:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.razas = resp2.data.results;
@@ -149,7 +149,7 @@ $http.get('http://52.39.15.75:1337/raza/?idUsuario='+MyService.data.idUsuario).t
 });
 
 
-$http.get('http://52.39.15.75:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.alimentos = resp2.data.results;
@@ -162,7 +162,7 @@ $http.get('http://52.39.15.75:1337/alimento/?idUsuario='+MyService.data.idUsuari
     $scope.alimentos=$scope.alimentos.reverse();
    
 });
-$http.get('http://52.39.15.75:1337/tipoBano/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/tipoBano/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.tiposBanos = resp2.data.results;
@@ -175,7 +175,7 @@ $http.get('http://52.39.15.75:1337/tipoBano/?idUsuario='+MyService.data.idUsuari
     $scope.tiposBanos=$scope.tiposBanos.reverse();
    
 });
-$http.get('http://52.39.15.75:1337/tipoAlimento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/tipoAlimento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.tiposAlimentos = resp2.data.results;
@@ -188,7 +188,7 @@ $http.get('http://52.39.15.75:1337/tipoAlimento/?idUsuario='+MyService.data.idUs
     $scope.tiposAlimentos=$scope.tiposAlimentos.reverse();
    
 });
-$http.get('http://52.39.15.75:1337/tipoMedicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/tipoMedicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.tiposMedicamentos = resp2.data.results;
@@ -202,7 +202,7 @@ $http.get('http://52.39.15.75:1337/tipoMedicamento/?idUsuario='+MyService.data.i
    
 });
 
-$http.get('http://52.39.15.75:1337/medicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/medicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.medicamentos = resp2.data.results;
@@ -216,7 +216,7 @@ $http.get('http://52.39.15.75:1337/medicamento/?idUsuario='+MyService.data.idUsu
    
 });
 
-$http.get('http://52.39.15.75:1337/bano/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+$http.get('http://18.218.43.203:1337/bano/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
     var bandera="";
     var bandera2="";
     $scope.banos = resp2.data.results;
@@ -239,37 +239,37 @@ $http.get('http://52.39.15.75:1337/bano/?idUsuario='+MyService.data.idUsuario).t
     
 $scope.borrar=function(item){
    var idRaza=item.id;
-      $http.delete('http://52.39.15.75:1337/raza/'+idRaza , item)
+      $http.delete('http://18.218.43.203:1337/raza/'+idRaza , item)
       $modalInstance.dismiss('cancel');
 };
 $scope.borrarAlimento=function(item){
    var idAlimento=item.id;
-      $http.delete('http://52.39.15.75:1337/alimento/'+idAlimento , item)
+      $http.delete('http://18.218.43.203:1337/alimento/'+idAlimento , item)
       $modalInstance.dismiss('cancel');
 };
 $scope.borrarMedicamento=function(item){
    var idMedicamento=item.id;
-      $http.delete('http://52.39.15.75:1337/medicamento/'+idMedicamento , item)
+      $http.delete('http://18.218.43.203:1337/medicamento/'+idMedicamento , item)
       $modalInstance.dismiss('cancel');
 };
 $scope.borrarBano=function(item){
    var idBano=item.id;
-      $http.delete('http://52.39.15.75:1337/bano/'+idBano , item)
+      $http.delete('http://18.218.43.203:1337/bano/'+idBano , item)
       $modalInstance.dismiss('cancel');
 };
 $scope.borrarTipoBano=function(item){
    var idTipoBano=item.id;
-      $http.delete('http://52.39.15.75:1337/tipoBano/'+idTipoBano , item)
+      $http.delete('http://18.218.43.203:1337/tipoBano/'+idTipoBano , item)
       $modalInstance.dismiss('cancel');
 };
 $scope.borrarTipoAlimento=function(item){
    var idTipoAlimento=item.id;
-      $http.delete('http://52.39.15.75:1337/tipoAlimento/'+idTipoAlimento , item)
+      $http.delete('http://18.218.43.203:1337/tipoAlimento/'+idTipoAlimento , item)
       $modalInstance.dismiss('cancel');
 };
 $scope.borrarTipoMedicamento=function(item){
    var idTipoMedicamento=item.id;
-      $http.delete('http://52.39.15.75:1337/tipoMedicamento/'+idTipoMedicamento , item)
+      $http.delete('http://18.218.43.203:1337/tipoMedicamento/'+idTipoMedicamento , item)
       $modalInstance.dismiss('cancel');
 };
 //  $scope.filterOptions = {
@@ -294,7 +294,7 @@ $scope.borrarTipoMedicamento=function(item){
 //     $scope.getPagedDataAsync = function (pageSize, page, searchText) {
 //         setTimeout(function () {
 //            var data ;
-//           $http.get('http://52.39.15.75:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
+//           $http.get('http://18.218.43.203:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp2) {
 //             $scope.alimentos = resp2.data.results;
 //           });
 //           data = $scope.alimentos;
@@ -329,7 +329,7 @@ $scope.borrarTipoMedicamento=function(item){
 
 
     $scope.mensajeBorrado="Al borrar este animal, se perderá de manera definitiva toda la información referente al mismo, está seguro de querer borrarlo?";
-     $http.get('http://52.39.15.75:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+     $http.get('http://18.218.43.203:1337/raza/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.razas = resp.data.results;
     });
     $scope.okSalto = function (item) {
@@ -338,7 +338,7 @@ $scope.borrarTipoMedicamento=function(item){
       item.idUsuario=MyService.data.idUsuario;
       item.hembra=MyService.data.hembra;
       item.numero=MyService.data.numero;
-      $http.post('http://52.39.15.75:1337/salto/' ,item);  
+      $http.post('http://18.218.43.203:1337/salto/' ,item);  
       $modalInstance.close();
       // var pas = item._id;
       // $scope.ordenosFiltrados = $scope.ordenos.filter(function (ordeno) {
@@ -349,7 +349,7 @@ $scope.borrarTipoMedicamento=function(item){
       var idAnimal=MyService.data.identificador;
       item.idAnimal=idAnimal;
       item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/tratamiento/' ,item);  
+      $http.post('http://18.218.43.203:1337/tratamiento/' ,item);  
       $modalInstance.close();
       // var pas = item._id;
       // $scope.ordenosFiltrados = $scope.ordenos.filter(function (ordeno) {
@@ -392,7 +392,7 @@ $scope.borrarTipoMedicamento=function(item){
        var idAnimal=MyService.data.identificador;
       item.idAnimal=idAnimal;
       item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/peso/' ,item);  
+      $http.post('http://18.218.43.203:1337/peso/' ,item);  
      
       $modalInstance.close();
       // var pas = item._id;
@@ -416,7 +416,7 @@ $scope.borrarTipoMedicamento=function(item){
        var idAnimal=MyService.data.identificador;
       item.idAnimal=idAnimal;
       item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/parto/' ,item);  
+      $http.post('http://18.218.43.203:1337/parto/' ,item);  
      $scope.nuevoAnimal={};
      $scope.nuevoAnimal.idArete=item.idArete;
       $scope.nuevoAnimal.nombre=item.nombre;
@@ -426,7 +426,7 @@ $scope.borrarTipoMedicamento=function(item){
         $scope.nuevoAnimal.idUsuario=MyService.data.idUsuario;
         $scope.nuevoAnimal.sexo=item.sexo;
         $scope.nuevoAnimal.avatar=item.avatar;
-       $http.post('http://52.39.15.75:1337/animal/' ,$scope.nuevoAnimal);
+       $http.post('http://18.218.43.203:1337/animal/' ,$scope.nuevoAnimal);
       $modalInstance.close();
       // var pas = item._id;
       // $scope.ordenosFiltrados = $scope.ordenos.filter(function (ordeno) {
@@ -439,7 +439,7 @@ $scope.borrarTipoMedicamento=function(item){
       var idAnimal=MyService.data.identificador;
       item.idAnimal=idAnimal;
       item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/ordeno/' ,item);  
+      $http.post('http://18.218.43.203:1337/ordeno/' ,item);  
       $modalInstance.close();
       // var pas = item._id;
       // $scope.ordenosFiltrados = $scope.ordenos.filter(function (ordeno) {
@@ -449,7 +449,7 @@ $scope.borrarTipoMedicamento=function(item){
     $scope.machos=[];
     $scope.hembras=[];
  $scope.cargaHembras = function(){
-      $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.animales = resp.data.results;
         for (var i=0;i<$scope.animales.length;++i){
           if($scope.animales[i].sexo=='Hembra'){
@@ -461,7 +461,7 @@ $scope.borrarTipoMedicamento=function(item){
     $scope.cargaHembras();
      $scope.hembrasJovenes=[];
  $scope.cargaHembrasJovenes = function(){
-      $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.animales = resp.data.results;
         for (var i=0;i<$scope.animales.length;++i){
           if($scope.animales[i].sexo=='Hembra' && $scope.animales[i].grupo!='Vacas'){
@@ -473,7 +473,7 @@ $scope.borrarTipoMedicamento=function(item){
     $scope.cargaHembrasJovenes();
     $scope.hembrasAdultas=[];
  $scope.cargaHembrasAdultas = function(){
-      $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.animales = resp.data.results;
         for (var i=0;i<$scope.animales.length;++i){
           if($scope.animales[i].sexo=='Hembra' && $scope.animales[i].grupo=='Vacas'){
@@ -486,7 +486,7 @@ $scope.borrarTipoMedicamento=function(item){
 
 $scope.secas=[];
  $scope.cargaSecas = function(){
-      $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.animales = resp.data.results;
         for (var i=0;i<$scope.animales.length;++i){
           if($scope.animales[i].sexo=='Hembra' &&  $scope.animales[i].estado==false && $scope.animales[i].grupo=='Vacas'){
@@ -501,7 +501,7 @@ $scope.secas=[];
 
     $scope.enOrdeno=[];
  $scope.cargaEnOrdeno = function(){
-      $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.animales = resp.data.results;
         for (var i=0;i<$scope.animales.length;++i){
           if($scope.animales[i].sexo=='Hembra' &&  $scope.animales[i].estado==true && $scope.animales[i].grupo=='Vacas'){
@@ -517,7 +517,7 @@ $scope.secas=[];
 
 
     $scope.cargaMachos = function(){
-      $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.animales = resp.data.results;
         for (var i=0;i<$scope.animales.length;++i){
           if($scope.animales[i].sexo=='Macho'){
@@ -528,32 +528,32 @@ $scope.secas=[];
     };
   $scope.cargaMachos();
     $scope.cargaTiposBanos = function(){
-      $http.get('http://52.39.15.75:1337/tipoBano/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/tipoBano/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.tiposBanos = resp.data.results;
       });
     };
     $scope.cargaTiposMedicamentos = function(){
-      $http.get('http://52.39.15.75:1337/tipoMedicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/tipoMedicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.tiposMedicamentos = resp.data.results;
       });
     };
     $scope.cargaBanos = function(){
-      $http.get('http://52.39.15.75:1337/bano/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/bano/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.Banos = resp.data.results;
       });
     };
      $scope.cargaTiposAlimentos = function(){
-      $http.get('http://52.39.15.75:1337/tipoAlimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/tipoAlimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.tiposAlimentos = resp.data.results;
       });
     };
     $scope.cargaAlimentos = function(){
-      $http.get('http://52.39.15.75:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/alimento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.alimentos = resp.data.results;
       });
     };
     $scope.cargaMedicamentos = function(){
-      $http.get('http://52.39.15.75:1337/medicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+      $http.get('http://18.218.43.203:1337/medicamento/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
         $scope.medicamentos = resp.data.results;
       });
     };
@@ -583,7 +583,7 @@ $scope.okMedicamento = function (item) {
       // var idAnimal=MyService.data.identificador;
       // item.idAnimal=idAnimal;
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/medicamento/' ,item);       
+      $http.post('http://18.218.43.203:1337/medicamento/' ,item);       
       $modalInstance.close();
     //   var pas = item._id;
     //   $scope.banosFiltrados = $scope.banos.filter(function (bano) {  
@@ -601,7 +601,7 @@ $scope.okMedicamento = function (item) {
       // var idAnimal=MyService.data.identificador;
       // item.idAnimal=idAnimal;
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/alimento/' ,item);       
+      $http.post('http://18.218.43.203:1337/alimento/' ,item);       
       $modalInstance.close();
     //   var pas = item._id;
     //   $scope.banosFiltrados = $scope.banos.filter(function (bano) {  
@@ -614,7 +614,7 @@ $scope.okMedicamento = function (item) {
 
 
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/raza/' ,item);       
+      $http.post('http://18.218.43.203:1337/raza/' ,item);       
       $modalInstance.close();
    
 
@@ -622,26 +622,26 @@ $scope.okMedicamento = function (item) {
 
      $scope.okTipoMedicamento = function (item) {
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/tipomedicamento/' ,item);       
+      $http.post('http://18.218.43.203:1337/tipomedicamento/' ,item);       
       $modalInstance.close();
       };
 
 
        $scope.okTipoAlimento = function (item) {
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/tipoalimento/' ,item);       
+      $http.post('http://18.218.43.203:1337/tipoalimento/' ,item);       
       $modalInstance.close();
       };
 
        $scope.okTipoBano = function (item) {
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/tipobano/' ,item);       
+      $http.post('http://18.218.43.203:1337/tipobano/' ,item);       
       $modalInstance.close();
       };
     $scope.okBano = function (item) {
 
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/bano/' ,item);       
+      $http.post('http://18.218.43.203:1337/bano/' ,item);       
       $modalInstance.close();
   
 
@@ -656,7 +656,7 @@ $scope.okMedicamento = function (item) {
       var idAnimal=MyService.data.identificador;
        item.idAnimal=idAnimal;
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/sumAlimento/' ,item);       
+      $http.post('http://18.218.43.203:1337/sumAlimento/' ,item);       
       $modalInstance.close();
     //   var pas = item._id;
     //   $scope.banosFiltrados = $scope.banos.filter(function (bano) {  
@@ -672,7 +672,7 @@ $scope.okMedicamento = function (item) {
       var idAnimal=MyService.data.identificador;
        item.idAnimal=idAnimal;
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/sumMedicamento/' ,item);       
+      $http.post('http://18.218.43.203:1337/sumMedicamento/' ,item);       
       $modalInstance.close();
     //   var pas = item._id;
     //   $scope.banosFiltrados = $scope.banos.filter(function (bano) {  
@@ -688,7 +688,7 @@ $scope.okMedicamento = function (item) {
       var idAnimal=MyService.data.identificador;
        item.idAnimal=idAnimal;
        item.idUsuario=MyService.data.idUsuario;
-      $http.post('http://52.39.15.75:1337/sumBano/' ,item);       
+      $http.post('http://18.218.43.203:1337/sumBano/' ,item);       
       $modalInstance.close();
     //   var pas = item._id;
     //   $scope.banosFiltrados = $scope.banos.filter(function (bano) {  
@@ -708,7 +708,7 @@ $scope.okMedicamento = function (item) {
 // ##########################################################################
     $scope.okConfirm = function (item) { 
       var idAnimal=MyService.data.identificador;
-      $http.delete('http://52.39.15.75:1337/animal/'+idAnimal , item)
+      $http.delete('http://18.218.43.203:1337/animal/'+idAnimal , item)
       // $scope.items.splice($scope.items.indexOf(item), 1);
       $scope.items = null;
       $scope.item = null;
@@ -718,7 +718,7 @@ $scope.okMedicamento = function (item) {
 
     $scope.okConfirm2 = function (item) { 
      var idGrupo=MyService.data.identificador;
-    $http.delete('http://52.39.15.75:1337/grupo/'+idGrupo, item)
+    $http.delete('http://18.218.43.203:1337/grupo/'+idGrupo, item)
     // $scope.groups.splice($scope.groups.indexOf(item), 1);
  $scope.item = null;
  $scope.items = null;
@@ -864,7 +864,7 @@ $scope.okMedicamento = function (item) {
   ; 
   app.controller('TypeaheadDemoCtrl', ['$scope', '$http','MyService','$state', '$filter', 'filterFilter',function($scope, $http, MyService, $state,$filter,filterFilter) {
     $scope.selected = undefined;
-    $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
       $scope.items2 = resp.data.results;
     });
 
@@ -877,7 +877,7 @@ $scope.okMedicamento = function (item) {
 // $state.go('app.dashboard-v1');
     MyService.data.luz = 'on';
     
-    // $http.get('http://52.39.15.75:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
+    // $http.get('http://18.218.43.203:1337/animal/?idUsuario='+MyService.data.idUsuario).then(function (resp) {
     //   $scope.items2 = resp.data.results;
     // });
   

@@ -4,7 +4,7 @@ app.controller('ContactCtrl', ['$scope', '$http', '$filter', '$modal', 'MyServic
 
   $scope.filter = '';
 
-   $http.get('http://52.39.15.75:1339/genero').then(function (resp) {
+   $http.get('http://18.218.43.203:1339/genero').then(function (resp) {
     $scope.groups = resp.data;
 // var numero = $scope.groups.length;
 // $scope.numero=numero;
@@ -14,7 +14,7 @@ app.controller('ContactCtrl', ['$scope', '$http', '$filter', '$modal', 'MyServic
 
 
 $scope.carga = function(){
- $http.get('http://52.39.15.75:1339/genero').then(function (resp) {
+ $http.get('http://18.218.43.203:1339/genero').then(function (resp) {
     $scope.groups = resp.data;
  });
 };
@@ -23,7 +23,7 @@ $scope.carga = function(){
  var identificador=item._id;
     MyService.data.identificador = identificador;
 // alert("servicio: " +MyService.data.identificador);
- // $http.get('http://52.39.15.75:1339/cancion/?idDisco='+MyService.data.identificador).then(function (resp) {
+ // $http.get('http://18.218.43.203:1339/cancion/?idDisco='+MyService.data.identificador).then(function (resp) {
  //    $scope.canciones = resp.data;
  //  });
      
@@ -48,7 +48,7 @@ $scope.carga = function(){
     };
     //  $scope.ok = function (item) {
 
-    //   $http.post('http://52.39.15.75:1339/api/cancion/' ,item);
+    //   $http.post('http://18.218.43.203:1339/api/cancion/' ,item);
     //   $modalInstance.close($scope.selected.item);
     // };
    
@@ -80,7 +80,7 @@ $scope.carga = function(){
         // $scope.refreshGroups = function(group) {
          
         // return $http.get(
-        //   'http://52.39.15.75:1339/api/genero'
+        //   'http://18.218.43.203:1339/api/genero'
         
         // ).then(function(response) {
         //   $scope.groups = response.data.results;
@@ -110,7 +110,7 @@ $scope.carga = function(){
 
   $scope.deleteGroup = function(item){
 
-     $http.delete('http://52.39.15.75:1339/genero/'+item._id , item)
+     $http.delete('http://18.218.43.203:1339/genero/'+item._id , item)
     $scope.groups.splice($scope.groups.indexOf(item), 1);
   };
 
@@ -124,7 +124,7 @@ $scope.carga = function(){
     $scope.group = item;
     $scope.group.selected = true;
     $scope.filter = item.name;
-$http.get('http://52.39.15.75:1339/disco').then(function (resp) {
+$http.get('http://18.218.43.203:1339/disco').then(function (resp) {
     $scope.items = resp.data;
  $scope.item = null;  
  document.getElementById('panel').style.visibility='hidden';
@@ -154,7 +154,7 @@ $http.get('http://52.39.15.75:1339/disco').then(function (resp) {
       document.getElementById('panel').style.visibility='visible';
     // alert("id:" +item._id);
 
-      $http.get('http://52.39.15.75:1339/cancion').then(function (resp) {
+      $http.get('http://18.218.43.203:1339/cancion').then(function (resp) {
     $scope.canciones = resp.data;
     });
        // alert("pasado:"+item._id);
@@ -172,14 +172,14 @@ $http.get('http://52.39.15.75:1339/disco').then(function (resp) {
   };
 
   $scope.deleteItem = function(item){
-    $http.delete('http://52.39.15.75:1339/disco/'+item._id , item)
+    $http.delete('http://18.218.43.203:1339/disco/'+item._id , item)
     $scope.items.splice($scope.items.indexOf(item), 1);
     $scope.item = $filter('orderBy')($scope.items, 'nombre')[0];
     if($scope.item) $scope.item.selected = true;
   };
 
 $scope.deleteCancion = function(cancion){
-    $http.delete('http://52.39.15.75:1339/cancion/'+cancion._id , cancion)
+    $http.delete('http://18.218.43.203:1339/cancion/'+cancion._id , cancion)
     $scope.cancionesFiltradas.splice($scope.canciones.indexOf(cancion), 1);
     $scope.cancion = $filter('orderBy')($scope.canciones, 'nombre')[0];
     if($scope.cancion) $scope.cancion.selected = true;
@@ -195,7 +195,7 @@ $scope.deleteCancion = function(cancion){
     $scope.items.push(item);
     $scope.selectItem(item);
     $scope.item.editing = true;
-    $http.get('http://52.39.15.75:1339/genero').then(function (resp) {
+    $http.get('http://18.218.43.203:1339/genero').then(function (resp) {
     $scope.groups = resp.data;
  }); 
 
@@ -218,10 +218,10 @@ $scope.deleteCancion = function(cancion){
   // alert("nombre: " +item.nombre);
 //  
   if (cancion.id){
-     $http.put('http://52.39.15.75:1339/cancion/'+cancion.id , cancion)
+     $http.put('http://18.218.43.203:1339/cancion/'+cancion.id , cancion)
    }
      else {
-  $http.post('http://52.39.15.75:1339/cancion/' , cancion);
+  $http.post('http://18.218.43.203:1339/cancion/' , cancion);
    }
    $scope.items = null;
     $scope.cancion = null;
@@ -246,7 +246,7 @@ $scope.deleteCancion = function(cancion){
  //    item._id=null;
  //    MyService.data.actualizado.name=item.name;
 
- //     $http.put('http://52.39.15.75:1339/genero/'+MyService.data.idenGen, MyService.data.actualizado);
+ //     $http.put('http://18.218.43.203:1339/genero/'+MyService.data.idenGen, MyService.data.actualizado);
 
  //   $scope.items = null;
  //    $scope.item = null;
@@ -263,12 +263,12 @@ item.editing = false;
      generoAct.selected=item.selected;
         generoAct.editing=item.editing;
 if (MyService.data.idenGen){
-     $http.put('http://52.39.15.75:1339/genero/'+MyService.data.idenGen, generoAct)
+     $http.put('http://18.218.43.203:1339/genero/'+MyService.data.idenGen, generoAct)
 }
 else {
- $http.post('http://52.39.15.75:1339/genero/', generoAct)
+ $http.post('http://18.218.43.203:1339/genero/', generoAct)
     }
- $http.get('http://52.39.15.75:1339/genero').then(function (resp) {
+ $http.get('http://18.218.43.203:1339/genero').then(function (resp) {
     $scope.groups = resp.data;
  });
 
@@ -294,12 +294,12 @@ else {
   discoAct.avatar=item.avatar;
   // discoAct.ubicacion=item.ubicacion;
   if (MyService.data.idenDisc){
-     $http.put('http://52.39.15.75:1339/disco/'+MyService.data.idenDisc , discoAct)
+     $http.put('http://18.218.43.203:1339/disco/'+MyService.data.idenDisc , discoAct)
    }
   else {
-    $http.post('http://52.39.15.75:1339/disco/', discoAct)
+    $http.post('http://18.218.43.203:1339/disco/', discoAct)
 
- // $http.get('http://52.39.15.75:1339/api/disco').then(function (resp) {
+ // $http.get('http://18.218.43.203:1339/api/disco').then(function (resp) {
  //    $scope.items = resp.data.results;
  //    $scope.item = $filter('orderBy')($scope.items, 'genero')[0];
  //    $scope.item.selected = true;
@@ -307,7 +307,7 @@ else {
 
  //  $scope.filter = '';
   }
-  $http.get('http://52.39.15.75:1339/genero').then(function (resp) {
+  $http.get('http://18.218.43.203:1339/genero').then(function (resp) {
     $scope.groups = resp.data;
 // alert("grupos cargados" );
   document.getElementById('boton').style.visibility='visible';
